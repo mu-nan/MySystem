@@ -29,6 +29,19 @@ interface roleListInt {
     roleId: number,
     suthorty: number[],
 }
+
+interface dialogInt {
+    show:boolean,
+    title: string,
+}
+export interface edititemInt {
+    id: number,
+    nikeName: string,
+    userName: string,
+    role:number[],
+
+}
+
 export class initData {
     selectData: SelectDataInt = {
         nikeName: '',
@@ -38,4 +51,17 @@ export class initData {
 
     allDataList: ListInt[] = []
     roleList:roleListInt[] = []
+
+    editItem: edititemInt = {
+        id: 0,
+        nikeName: '',
+        userName: '',
+        role: []
+,
+    }
+
+    dialog: dialogInt = {
+        show:false,
+        title:'修改用户权限',
+    }
 }
